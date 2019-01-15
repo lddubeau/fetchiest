@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "Fetch wrapper with retry and diagnosis capabilities.",
-  "versionedSources": "src/main.ts",
   "keywords": [
     "fetch",
     "ajax",
@@ -18,7 +17,8 @@
   "bugs": "https://github.com/lddubeau/fetchiest/issues",
   "author": "Louis-Dominique Dubeau <ldd@lddubeau.com>",
   "license": "MPL-2.0",
-  "main": "main.js",
+  "main": "fetchiest.js",
+  "types": "fetchiest.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^7.3.1",
