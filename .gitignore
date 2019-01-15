@@ -1,0 +1,4 @@
+localConfig.js
+/node_modules
+/build
+/coverage

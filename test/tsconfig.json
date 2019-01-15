@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "../build",
+    "paths": {
+      "fetchiest": ["dist/fetchiest"]
+    }
+  },
+  "include": [
+    "*.ts"
+  ]
+}
