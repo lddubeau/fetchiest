@@ -8,8 +8,9 @@
  * See https://github.com/Microsoft/TypeScript/issues/12123.
  */
 // tslint:disable:no-any
+// tslint:disable-next-line:ban-types
 export function fixPrototype(obj: any, parent: Function): void {
-  const oldProto: Function = Object.getPrototypeOf !== undefined ?
+  const oldProto = Object.getPrototypeOf !== undefined ?
     Object.getPrototypeOf(obj) : obj.__proto__;
 
   if (oldProto !== parent) {
@@ -172,7 +173,7 @@ function dedupURL(url: string): string {
 }
 
 async function makeDelay(timeout: number): Promise<void> {
-  return new Promise<void>((resolve) => {
+  return new Promise<void>(resolve => {
     setTimeout(resolve, timeout);
   });
 }

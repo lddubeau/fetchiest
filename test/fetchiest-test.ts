@@ -20,7 +20,8 @@ favicon.ico? appended (${call[0]} does not begin with ${startsWith})`)
 
 describe("fetchiest", () => {
   let sandbox: sinon.SinonSandbox;
-  let fetchStub: sinon.SinonStub;
+  let fetchStub: sinon.SinonStub<Parameters<typeof fetch>,
+  ReturnType<typeof fetch>>;
   let onLine = true;
   const url = "http://www.example.com";
   let success: Response;
@@ -92,9 +93,9 @@ describe("fetchiest", () => {
     await Promise.resolve();
   }
 
-  async function neverResolves(): Promise<void> {
+  async function neverResolves(): Promise<Response> {
     // tslint:disable-next-line:promise-must-complete
-    return new Promise<void>(() => undefined);
+    return new Promise<Response>(() => undefined);
   }
 
   describe("#fetch", () => {
