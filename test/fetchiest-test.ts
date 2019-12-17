@@ -1,10 +1,12 @@
 import { expect, use } from "chai";
-import { expectRejection } from "expect-rejection";
+import * as chai from "chai";
+import { expectRejection, use as erUse } from "expect-rejection";
 import "mocha";
 import * as sinon from "sinon";
 import * as sinonChai from "sinon-chai";
 
 use(sinonChai);
+erUse(chai);
 
 // tslint:disable-next-line:no-implicit-dependencies
 import * as fetchiest from "fetchiest";
