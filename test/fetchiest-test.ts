@@ -81,7 +81,9 @@ describe("fetchiest", () => {
 
   async function next(): Promise<void> {
     sandbox.clock.next();
-    // Yes we need to resolve twice. :-/
+    // Yes we need to resolve four times. :-/
+    await Promise.resolve();
+    await Promise.resolve();
     await Promise.resolve();
     await Promise.resolve();
   }
